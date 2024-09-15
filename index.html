@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://api.openai.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src https://api.openai.com;">
+        <title>Simple Chatbot</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="chat_container">
+            <div id="chat-box"></div>
+
+            <input type="text" id="user-input" placeholder="Ask a question!">
+            <button id="send-button">Send</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
