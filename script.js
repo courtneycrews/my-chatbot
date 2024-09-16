@@ -1,6 +1,3 @@
-require('dotenv').config();
-const API_KEY = process.env.API_KEY;
-
 document.getElementById('send-button').addEventListener('click', sendMessage);
 
 async function sendMessage() {
