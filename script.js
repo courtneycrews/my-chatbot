@@ -2,6 +2,8 @@ document.getElementById('send-button').addEventListener('click', sendMessage);
 
 async function sendMessage() {
     const userInput = document.getElementById('user-input').value;
+    const selectedGenre = document.getElementById('genre-select').value;
+    
     if (userInput.trim() === '') return;
 
     appendMessage('user', userInput);
@@ -15,8 +17,8 @@ async function sendMessage() {
         body: JSON.stringify({
             model: 'gpt-3.5-turbo',
             messages: [
-                {role: 'system', content: 'You are a snarky but helpful assistant.' },
-                {role: 'user', content: userInput }
+                {role: 'system', content: 'You are a creative writing assistant. Generate unique and inspiring writing prompts based on the user\'s input. The user may specify genres such as mystery, romance, sci-fi, or fantasy.' },
+                {role: 'user', content: `Generate a ${selectedGenre} writing prompt based on: ${userInput}` }
             ],
             max_tokens: 150
         }) 
